@@ -1,0 +1,6 @@
+1, Brest
+3, Gomel
+4, Grodno
+7, Minsk
+5, Mogilev
+2, Vitebsk
