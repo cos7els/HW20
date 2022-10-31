@@ -24,6 +24,7 @@ public class Connect {
             System.out.println(result);
             Files.write(Path.of("students.txt"), result.toString().getBytes());
             result = new StringBuilder();
+            rs.close();
             rs = stmt.executeQuery("select * from cities");
             while (rs.next()) {
                 int id = rs.getInt(1);
@@ -32,6 +33,20 @@ public class Connect {
             }
             System.out.println(result);
             Files.write(Path.of("cities.txt"), result.toString().getBytes());
+            result = new StringBuilder();
+            rs.close();
+            rs = stmt.executeQuery("select students.*, cities.* from students inner join cities on students.city = cities.city");
+            while (rs.next()) {
+                int studentId = rs.getInt(1);
+                String firstName = rs.getString(2);
+                String lastName = rs.getString(3);
+                String studentCity = rs.getString(4);
+                int cityId = rs.getInt(5);
+                String citiesCity = rs.getString(6);
+                result.append(String.format("%d, %s %s, %s, %d, %s\n", studentId, firstName, lastName, studentCity, cityId, citiesCity));
+            }
+            System.out.println(result);
+            Files.write(Path.of("students_and_cities.txt"), result.toString().getBytes());
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }

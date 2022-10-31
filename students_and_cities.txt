@@ -1,0 +1,9 @@
+1, Boris Razor, Brest, 1, Brest
+6, The Sol, Brest, 1, Brest
+2, Tony Bullet, Gomel, 3, Gomel
+8, The Mickey, Gomel, 3, Gomel
+3, Tommy Tit, Grodno, 4, Grodno
+9, The Tyron, Grodno, 4, Grodno
+5, The Brick, Minsk, 7, Minsk
+4, The Turkish, Mogilev, 5, Mogilev
+7, The Vinsenth, Vitebsk, 2, Vitebsk
